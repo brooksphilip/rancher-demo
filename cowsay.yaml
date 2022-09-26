@@ -3,8 +3,8 @@ kind: Deployment
 metadata:
   name: cowsay
   namespace: demo
-  # labels:
-  #   app: nginx
+  labels:
+    app: demo
 spec:
   replicas: 3
   selector:
