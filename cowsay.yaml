@@ -42,7 +42,7 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: cowsay
-  namespace: demo
+  namespace: default
 spec:
   rules:
   - host: cow.rfed.demo.rancher.lol
@@ -55,3 +55,7 @@ spec:
               number: 8080
         path: /
         pathType: Prefix
+  tls:
+  - hosts:
+    - cow.rfed.demo.rancher.lol
+    secretName: cow-ingress
