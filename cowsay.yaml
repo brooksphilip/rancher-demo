@@ -31,7 +31,7 @@ metadata:
   namespace: demo
 spec:
   selector:
-    app: cowdemo
+    app: demo
   ports:
   - protocol: TCP
     port: 8080
