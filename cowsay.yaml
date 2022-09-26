@@ -20,4 +20,4 @@ spec:
       — name: cowsaydemo
         image: bgulla/rancher-demo
         ports:
-          — containerPort: 8080
+        — containerPort: 8080
