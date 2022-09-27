@@ -17,8 +17,8 @@ spec:
     spec:
       containers:
       - env:
-        - name: COW_COLOR
-          value: pink
+        - name: test
+          value: test
       - name: demo
         image: bgulla/rancher-demo
         ports:
