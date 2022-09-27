@@ -59,3 +59,20 @@ spec:
   - hosts:
     - cow.rfed.demo.rancher.lol
     secretName: cow-ingress
+
+
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: redis
+  labels:
+    app: redis
+spec:
+  storageClassName: "longhorn-crypto-per-volume"
+  accessModes:
+  - ReadWriteMany
+  resources:
+    requests:
+      storage: 250Mi
