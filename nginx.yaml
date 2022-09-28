@@ -23,7 +23,6 @@ spec:
         volumeMounts:
         - name: redis-data
           mountPath: /data
-          subPath:
       volumes:
       - name: redis-data
         persistentVolumeClaim:
