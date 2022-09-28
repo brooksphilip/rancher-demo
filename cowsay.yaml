@@ -23,6 +23,14 @@ spec:
         image: bgulla/rancher-demo
         ports:
         - containerPort: 8080
+        volumeMounts:
+        - name: redis-data
+          mountPath: /data
+          subPath:
+      volumes:
+      - name: redis-data
+        persistentVolumeClaim:
+          claimName: redis
 
 
 
