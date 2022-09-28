@@ -1,0 +1,46 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx
+  namespace: default
+  labels:
+    app: nginx
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: demo
+    spec:
+      containers:
+      - name: nginx
+        image: nginx
+        ports:
+        - containerPort: 80
+        volumeMounts:
+        - name: redis-data
+          mountPath: /data
+          subPath:
+      volumes:
+      - name: redis-data
+        persistentVolumeClaim:
+          claimName: redis
+
+
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: redis
+  labels:
+    app: redis
+spec:
+  storageClassName: "longhorn-crypto-global"
+  accessModes:
+  - ReadWriteMany
+  resources:
+    requests:
+      storage: 250Mi
