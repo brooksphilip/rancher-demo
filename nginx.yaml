@@ -17,18 +17,18 @@ spec:
       labels:
         app: nginx
     spec:
-      containers:
-      - name: nginx
-        image: nginx
-        ports:
-        - containerPort: 80
-        volumeMounts:
-        - name: redis-data
-          mountPath: /tmp
-      volumes:
+    containers:
+    - name: nginx
+      image: nginx
+      ports:
+      - containerPort: 80
+      volumeMounts:
       - name: redis-data
+        mountPath: /tmp
+        volumes:
+        - name: redis-data
         persistentVolumeClaim:
-          claimName: redis
+        claimName: redis
 
 
 ---
