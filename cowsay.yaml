@@ -48,7 +48,7 @@ metadata:
   namespace: default
 spec:
   rules:
-  - host: cow.rfed.demo.rancher.lol
+  - host: cow.aws.rancher.lol
     http:
       paths:
       - backend:
