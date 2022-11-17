@@ -6,7 +6,7 @@ metadata:
   labels:
     app: demo
 spec:
-  replicas: 5
+  replicas: 10
   selector:
     matchLabels:
       app: demo
@@ -18,7 +18,7 @@ spec:
       containers:
       - env:
         - name: COW_COLOR
-          value: red
+          value: pink
         name: demo
         image: bgulla/rancher-demo
         ports:
