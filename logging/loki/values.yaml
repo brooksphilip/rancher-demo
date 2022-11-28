@@ -11,7 +11,7 @@ loki:
     size: 5Gi
 
   ingress:
-    enabled: true
+    enabled: false
     hosts:
     - host: loki.aws.rancher.lol
       paths:
