@@ -3,8 +3,9 @@ defaultNamespace: cert-manager
 helm:
   repo: https://charts.jetstack.io
   chart: cert-manager
-  version: 1.7.3
+  version: 1.9.1
   releaseName: cert-manager
+  extra_args: -dns01-recursive-nameservers-only,--dns01-recursive-nameservers=8.8.8.8:53\,1.1.1.1:53
 
 dependsOn:
 - name: rancher-demo-certmanager-crds
