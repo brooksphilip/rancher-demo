@@ -13,7 +13,7 @@ loki:
   ingress:
     enabled: true
     hosts:
-    - host: loki.svc.sienarfleet.systems
+    - host: loki.aws.rancher.lol
       paths:
       - /
 
