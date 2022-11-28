@@ -8,5 +8,5 @@ helm:
   extra_args: -dns01-recursive-nameservers-only,--dns01-recursive-nameservers=8.8.8.8:53\,1.1.1.1:53
 
 dependsOn:
-- name: rancher-demo-certmanager-crds
+- name: cert-add-certmanager-crds
 #essentials-gitops-apps-essentials-cert-manager-crds
