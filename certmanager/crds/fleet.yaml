@@ -1,1 +1,1 @@
-namespace: cert-manager
+defaultNamespace: cert-manager
