@@ -39,6 +39,19 @@ spec:
   resources:
     requests:
       storage: 2Gi
+      
+---      
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: longhorn-volv-pvc
+spec:
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: longhorn-crypto-global
+  resources:
+    requests:
+      storage: 2Gi
 
 # ---
 # apiVersion: v1
