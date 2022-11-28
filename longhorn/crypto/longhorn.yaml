@@ -44,7 +44,7 @@ spec:
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: longhorn-volv-pvc
+  name: longhorn-volv-pvc2
 spec:
   accessModes:
     - ReadWriteOnce
