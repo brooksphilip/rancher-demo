@@ -28,17 +28,17 @@ parameters:
   csi.storage.k8s.io/node-stage-secret-name: "longhorn-crypto"
   csi.storage.k8s.io/node-stage-secret-namespace: "longhorn-system"
 ---
-apiVersion: v1
-kind: PersistentVolumeClaim
-metadata:
-  name: longhorn-volv-pvc
-spec:
-  accessModes:
-    - ReadWriteOnce
-  storageClassName: longhorn-crypto-global
-  resources:
-    requests:
-      storage: 2Gi
+# apiVersion: v1
+# kind: PersistentVolumeClaim
+# metadata:
+#   name: longhorn-volv-pvc
+# spec:
+#   accessModes:
+#     - ReadWriteOnce
+#   storageClassName: longhorn-crypto-global
+#   resources:
+#     requests:
+#       storage: 2Gi
 
 # ---
 # apiVersion: v1
